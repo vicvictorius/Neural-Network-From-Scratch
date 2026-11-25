@@ -1,0 +1,15 @@
+# Cada experimento muda UMA coisa em relação a configs/cnn_base.yaml.
+# Rodar: python -m scripts.run_experiments --seeds 0 1 2
+base: configs/cnn_base.yaml
+
+experiments:
+  E0_base: {}
+  E1_lr_1e-2: {optimizer: {lr: 0.01}}
+  E1_lr_1e-4: {optimizer: {lr: 0.0001}}
+  E2_batchnorm: {model: {batchnorm: true}}
+  E3_dropout_025: {model: {dropout: 0.25}}
+  E3_dropout_050: {model: {dropout: 0.5}}
+  E4_augmentation: {training: {augmentation: true}}
+  E5_cosine: {scheduler: {name: cosine}}
+  # Preencha o E6 depois de analisar E1 a E5:
+  E6_melhor: {model: {batchnorm: true, dropout: 0.25}, training: {augmentation: true, epochs: 30}, scheduler: {name: cosine}}

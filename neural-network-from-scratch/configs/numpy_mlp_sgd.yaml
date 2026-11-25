@@ -1,0 +1,20 @@
+# Fase 1 - MLP em NumPy, otimizador sgd (comparação com o Adam)
+seed: 42
+output_dir: results/numpy_mlp_sgd
+
+model:
+  hidden: [128, 64]
+  activation: relu      # relu | sigmoid | tanh
+  dropout: 0.0
+  init: he              # he | xavier
+
+optimizer:
+  name: sgd
+  lr: 0.1
+  momentum: 0.9         # usado só por momentum
+  weight_decay: 0.0
+
+training:
+  epochs: 30
+  batch_size: 64
+  patience: 5           # early stopping

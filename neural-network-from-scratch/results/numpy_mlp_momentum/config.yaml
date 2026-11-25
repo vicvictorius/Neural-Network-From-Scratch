@@ -1,0 +1,18 @@
+seed: 42
+output_dir: results/numpy_mlp_momentum
+model:
+  hidden:
+  - 128
+  - 64
+  activation: relu
+  dropout: 0.0
+  init: he
+optimizer:
+  name: momentum
+  lr: 0.05
+  momentum: 0.9
+  weight_decay: 0.0
+training:
+  epochs: 30
+  batch_size: 64
+  patience: 5

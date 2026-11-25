@@ -1,0 +1,6 @@
+{
+  "best_val_acc": 0.9177,
+  "best_epoch": 8,
+  "seconds_per_epoch": 35.069471937625025,
+  "checkpoint": "checkpoints/E5_cosine_seed0.pt"
+}

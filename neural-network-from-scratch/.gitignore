@@ -1,0 +1,32 @@
+# Ambiente
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Segredos: NUNCA versionar
+.env
+*.env
+secrets/
+
+# Dados e modelos (baixados ou gerados localmente)
+data/
+checkpoints/*
+!checkpoints/.gitkeep
+*.pt
+*.npz
+wandb/
+runs/
+
+# Gabarito local (não publique: o repositório deve mostrar o SEU código)
+gabarito/
+
+# Jupyter e sistema
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+logs/

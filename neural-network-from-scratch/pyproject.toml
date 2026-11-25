@@ -1,0 +1,25 @@
+[project]
+name = "neural-network-from-scratch"
+version = "0.0.1"
+description = "Rede neural do zero em NumPy, reimplementada em PyTorch e evoluída para CNN no Fashion-MNIST."
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = ["gabarito"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
+ignore = ["N803", "N806", "N812"]  # nomes matemáticos (W, X, dW) e o padrão "import ... as F"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+    "torch: testes que dependem do PyTorch (Fase 2 em diante)",
+    "slow: testes mais demorados",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/*" = ["I001", "E402", "B905", "E501", "E702", "E741", "F401", "SIM115"]  # notebooks são exploratórios

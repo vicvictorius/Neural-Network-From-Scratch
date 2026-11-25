@@ -1,0 +1,30 @@
+# Fase 3 - modelo final, escolhido pela VALIDAÇÃO do protocolo rápido:
+#   E3 dropout 0,25 (91,96%), E5 cosine (91,77%) e E2 batchnorm (91,65%)
+#   foram os únicos acima da base (91,50%). Combinamos os três.
+#   Augmentation (E4) ficou de fora: em 8 épocas piorou a validação (90,77%),
+#   embora tenha reduzido o overfitting; com treinos longos pode valer a pena.
+# Mais épocas (15) que nos experimentos, porque o modelo está regularizado.
+seed: 0
+output_dir: results/cnn/E6_final
+
+model:
+  type: cnn
+  channels: [32, 64]
+  hidden: 128
+  batchnorm: true
+  dropout: 0.25
+
+optimizer:
+  name: adam
+  lr: 0.001
+  momentum: 0.9
+  weight_decay: 0.0
+
+scheduler:
+  name: cosine
+
+training:
+  epochs: 15
+  batch_size: 128
+  patience: 5
+  augmentation: false

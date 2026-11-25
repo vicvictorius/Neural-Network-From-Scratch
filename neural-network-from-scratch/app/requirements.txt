@@ -1,0 +1,5 @@
+torch==2.5.1
+numpy==1.26.4
+pillow==10.4.0
+gradio==4.44.1
+huggingface_hub==0.26.2  # gradio 4.x quebra com huggingface_hub >= 1.0

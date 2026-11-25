@@ -1,0 +1,23 @@
+# Fase 2 - mesma MLP em PyTorch
+seed: 42
+output_dir: results/torch_mlp
+
+model:
+  type: mlp
+  hidden: [128, 64]
+  dropout: 0.0
+
+optimizer:
+  name: adam            # sgd | adam
+  lr: 0.001
+  momentum: 0.9
+  weight_decay: 0.0
+
+scheduler:
+  name: none            # none | cosine | step
+
+training:
+  epochs: 30
+  batch_size: 64
+  patience: 5
+  augmentation: false

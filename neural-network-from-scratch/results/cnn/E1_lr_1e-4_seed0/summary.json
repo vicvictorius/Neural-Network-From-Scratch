@@ -1,0 +1,6 @@
+{
+  "best_val_acc": 0.8824,
+  "best_epoch": 8,
+  "seconds_per_epoch": 41.04055180437504,
+  "checkpoint": "checkpoints/E1_lr_1e-4_seed0.pt"
+}

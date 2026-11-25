@@ -1,0 +1,6 @@
+{
+  "best_val_acc": 0.9196,
+  "best_epoch": 7,
+  "seconds_per_epoch": 35.68340594675,
+  "checkpoint": "checkpoints/E3_dropout_025_seed0.pt"
+}

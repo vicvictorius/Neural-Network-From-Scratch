@@ -1,0 +1,16 @@
+# Protocolo RÁPIDO da Fase 3, usado para gerar os resultados publicados no
+# README em uma máquina com 1 núcleo de CPU (~35 s por época):
+#   1 seed e 8 épocas por experimento.
+# O protocolo completo (3 seeds, 20 épocas) está em configs/experiments.yaml:
+#   python -m scripts.run_experiments --seeds 0 1 2
+base: configs/cnn_base_rapido.yaml
+
+experiments:
+  E0_base: {}
+  E1_lr_1e-2: {optimizer: {lr: 0.01}}
+  E1_lr_1e-4: {optimizer: {lr: 0.0001}}
+  E2_batchnorm: {model: {batchnorm: true}}
+  E3_dropout_025: {model: {dropout: 0.25}}
+  E3_dropout_050: {model: {dropout: 0.5}}
+  E4_augmentation: {training: {augmentation: true}}
+  E5_cosine: {scheduler: {name: cosine}}

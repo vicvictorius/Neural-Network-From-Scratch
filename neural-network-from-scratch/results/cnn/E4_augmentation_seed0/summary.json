@@ -1,0 +1,6 @@
+{
+  "best_val_acc": 0.9077,
+  "best_epoch": 8,
+  "seconds_per_epoch": 34.88443681712499,
+  "checkpoint": "checkpoints/E4_augmentation_seed0.pt"
+}

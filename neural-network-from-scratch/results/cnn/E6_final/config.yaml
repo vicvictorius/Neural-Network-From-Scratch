@@ -1,0 +1,22 @@
+seed: 0
+output_dir: results/cnn/E6_final
+model:
+  type: cnn
+  channels:
+  - 32
+  - 64
+  hidden: 128
+  batchnorm: true
+  dropout: 0.25
+optimizer:
+  name: adam
+  lr: 0.001
+  momentum: 0.9
+  weight_decay: 0.0
+scheduler:
+  name: cosine
+training:
+  epochs: 15
+  batch_size: 128
+  patience: 5
+  augmentation: false
