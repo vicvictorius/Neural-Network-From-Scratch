@@ -121,11 +121,6 @@ Filtros da primeira camada, Grad-CAM e os erros mais confiantes do modelo final:
 
 Confusões mais frequentes no teste: Camisa classificada como Camiseta/top (96 vezes); Camisa classificada como Casaco (78 vezes); Camiseta/top classificada como Camisa (74 vezes). São justamente as classes de formato parecido (peças de parte de cima), o que também aparece na imagem média por classe do notebook 00.
 
-## O que aprendi
-
-<!-- A seção mais importante para quem avalia o projeto, e precisa ser sua.
-     Sugestões: o que mudou no seu entendimento de backpropagation; um bug real
-     e como o encontrou; o que surpreendeu nos experimentos; o que faria diferente. -->
 
 ## Limitações
 
